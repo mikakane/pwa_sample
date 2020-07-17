@@ -50,6 +50,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    "@nuxtjs/onesignal",
     "@nuxtjs/pwa"
   ],
   /*
@@ -75,5 +76,14 @@ export default {
     display: "standalone",
     scope: "/",
     start_url: "/"
+  },
+  oneSignal: {
+    init: {
+      appId: '309088fc-0d36-46f0-8819-02de872611ca',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+        disable: true
+      }
+    }
   }
 }
