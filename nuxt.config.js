@@ -45,17 +45,35 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    "@nuxtjs/pwa"
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/pwa"
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  pwa: {
+    workbox: {
+      /* workbox options */
+    }
+  },
+  manifest: {
+    name: "サンプルアプリ",
+    title: "サンプルアプリ",
+    'og:title': 'サンプルアプリ',
+    description: '',
+    'og:description': '',
+    lang: 'ja',
+    theme_color: "#529b58",
+    background_color: "#bde0c0",
+    display: "standalone",
+    scope: "/",
+    start_url: "/"
   }
 }
